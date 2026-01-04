@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Watchlist | MoodFlicks</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Standardized Responsive Header -->
+    <header>
+        <div class="logo">
+            <a href="/home"
+                style="text-decoration: none; color: inherit; display: flex; gap: 8px; align-items: center;">
+                <i class="fa-solid fa-film"></i> MoodFlicks
+            </a>
+        </div>
+
+        <!-- Desktop Navigation & Search -->
+        <div class="nav-center">
+            <div class="nav-links">
+                <a href="/home" class="nav-link">Home</a>
+                <a href="/browse" class="nav-link">Browse</a>
+                <a href="/watchlist" class="nav-link active">Watchlist</a>
+            </div>
+
+            <div class="search-bar" style="margin-left: 24px;">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input type="text" placeholder="Search movies, moods...">
+            </div>
+        </div>
+
+        <div class="nav-actions">
+            <button class="nav-icon-btn"><i class="fa-regular fa-bell"></i></button>
+            <div class="avatar">JM</div>
+        </div>
+
+        <!-- Mobile Menu Controls -->
+        <button class="mobile-menu-btn" aria-label="Toggle navigation" aria-expanded="false">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </header>
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay">
+        <a href="/home" class="mobile-nav-link">Home</a>
+        <a href="/browse" class="mobile-nav-link">Browse</a>
+        <a href="/watchlist" class="mobile-nav-link active">Watchlist</a>
+        <a href="/profile" class="mobile-nav-link">My Profile</a>
+    </div>
+
+    <main class="app-container">
+        <section class="results-header">
+            <h1>My Watchlist</h1>
+            <p class="subtitle">Your saved movies and shows</p>
+        </section>
+
+        <!-- Empty State (Hidden by default) -->
+        <div id="empty-state" class="empty-state">
+            <i class="fa-regular fa-bookmark"></i>
+            <h3>No movies yet!</h3>
+            <p>Add some mood-based picks to get started.</p>
+            <a href="/browse" class="cta-btn" style="text-decoration: none; display: inline-block;">Browse Movies</a>
+        </div>
+
+        <div id="watchlist-container" class="cards-grid">
+            <!-- Content injected here -->
+        </div>
+    </main>
+
+    <script src="js/storage.js"></script>
+    <script src="js/responsive.js"></script>
+    <script src="js/search-handler.js"></script>
+    <script src="js/watchlist.js"></script>
+</body>
+
+</html>

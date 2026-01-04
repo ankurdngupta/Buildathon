@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results | MoodFlicks</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Standardized Responsive Header -->
+    <header>
+        <div class="logo">
+            <a href="/home"
+                style="text-decoration: none; color: inherit; display: flex; gap: 8px; align-items: center;">
+                <i class="fa-solid fa-film"></i> MoodFlicks
+            </a>
+        </div>
+
+        <!-- Desktop Navigation & Search -->
+        <div class="nav-center">
+            <div class="nav-links">
+                <a href="/home" class="nav-link">Home</a>
+                <a href="/browse" class="nav-link">Browse</a>
+                <a href="/watchlist" class="nav-link">Watchlist</a>
+            </div>
+
+            <div class="search-bar" style="margin-left: 24px;">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input type="text" placeholder="Search movies, moods...">
+            </div>
+        </div>
+
+        <div class="nav-actions">
+            <!-- Filter Dropdown (Simple Select) -->
+            <div class="filter-dropdown" style="margin-right: 16px;">
+                <select id="genre-filter"
+                    style="padding: 6px 12px; border-radius: 8px; border: 1px solid var(--border-color); background: var(--bg-secondary); color: var(--text-color); cursor: pointer; outline: none;">
+                    <option value="">All Genres</option>
+                    <option value="Action">Action</option>
+                    <option value="Comedy">Comedy</option>
+                    <option value="Drama">Drama</option>
+                    <option value="Sci-Fi">Sci-Fi</option>
+                    <option value="Animation">Animation</option>
+                </select>
+            </div>
+
+            <button class="nav-icon-btn" onclick="alert('Notifications feature coming soon!')"><i
+                    class="fa-regular fa-bell"></i></button>
+            <div class="avatar" onclick="alert('Profile Dashboard coming soon!')">JM</div>
+        </div>
+
+        <!-- Mobile Menu Controls -->
+        <button class="mobile-menu-btn" aria-label="Toggle navigation" aria-expanded="false">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </header>
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay">
+        <a href="/home" class="mobile-nav-link">Home</a>
+        <a href="/browse" class="mobile-nav-link">Browse</a>
+        <a href="/watchlist" class="mobile-nav-link">Watchlist</a>
+        <a href="/profile" class="mobile-nav-link">My Profile</a>
+    </div>
+    <main id="results-section" class="app-container">
+        <section class="results-header">
+            <h1>Recommended Watchlist</h1>
+            <p id="context-summary">Based on your mood...</p>
+        </section>
+        <div id="recommendations-container" class="cards-grid">
+            <!-- Content injected here -->
+        </div>
+    </main>
+    <script src="js/responsive.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/search-handler.js"></script>
+    <script src="js/results.js"></script>
+</body>
+
+</html>
